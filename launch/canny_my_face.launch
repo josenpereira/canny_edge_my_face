@@ -1,0 +1,7 @@
+<launch>
+	<node pkg="nodelet" name="nodelet_manager" type="nodelet" args="manager __name:=nodelet_manager"/>
+
+	<node pkg="nodelet" name="camera" type="nodelet" args="load cv_camera/CvCameraNodelet nodelet_manager __name:=camera camera"/>
+
+	<node pkg="canny_edge_my_face" name="canny_my_face" type="canny_my_face.py"/> 
+</launch>
